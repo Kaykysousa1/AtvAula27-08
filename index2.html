@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Número Aleatório</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #numero-gerado {
+            font-size: 2em;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gerador de Número Aleatório</h1>
+
+    <button onclick="gerarNumero()">Gerar Número</button>
+
+    <p id="numero-gerado"></p>
+
+    <script>
+        function gerarNumero() {
+            // A função Math.random() retorna um número entre 0 (inclusivo) e 1 (exclusivo).
+            // Multiplicamos por 100 para ter um número entre 0 e 99.
+            // A função Math.floor() arredonda o número para baixo, para que ele seja um número inteiro.
+            let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+            
+            // Pega o elemento 'p' com o id 'numero-gerado' e coloca o número dentro dele.
+            document.getElementById("numero-gerado").innerText = "O número gerado é: " + numeroAleatorio;
+        }
+    </script>
+
+</body>
+</html>
